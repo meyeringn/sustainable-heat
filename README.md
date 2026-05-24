@@ -182,4 +182,4 @@ Philadelphia, PA
 
 -----
 
-*Developed through the Equitech Futures Civic Tech Institute, CTI 2026 Cohort · Philadelphia, PA*
+*Developed through the Equitech Futures Civic Tech Institute, CTI 2026 Cohort*
