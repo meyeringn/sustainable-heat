@@ -1,1 +1,80 @@
-
+{
+  "project": "SustAInable \u2014 Neighborhood Heat Illness Risk Prediction",
+  "author": "Nico Meyering, MPA",
+  "institution": "Equitech Futures Civic Tech Institute, CTI 2026",
+  "model_type": "Gradient Boosting Classifier (sklearn GBM)",
+  "note": "Trained on synthetic demonstration data. Swap in real CDC data to activate production model.",
+  "label_mode": "proxy",
+  "proxy_warning": "Labels are structurally derived proxies. Replace with NSSP data for production.",
+  "decision_threshold": 0.2,
+  "n_features": 23,
+  "feature_names": [
+    "places_diabetes",
+    "places_obesity",
+    "places_chd",
+    "places_copd",
+    "places_bphigh",
+    "places_casthma",
+    "places_kidney",
+    "places_csmoking",
+    "places_depression",
+    "places_stroke",
+    "places_cancer",
+    "places_mhlth",
+    "places_phlth",
+    "places_access2",
+    "hhi_overall_score",
+    "hhi_elderly_pct",
+    "hhi_poverty_pct",
+    "hhi_no_ac_pct",
+    "hhi_outdoor_worker_pct",
+    "hhi_disability_pct",
+    "hhi_urban_rural_code",
+    "hhi_impervious_pct",
+    "hhi_lst_mean"
+  ],
+  "training_events": "2010-2021 (7 events)",
+  "holdout_events": "2022-2024 (4 events)",
+  "cv_performance": {
+    "means": {
+      "auc_roc": 0.6205,
+      "recall": 0.7921,
+      "pr_auc": 0.4697,
+      "precision": 0.4358,
+      "f1": 0.5623
+    },
+    "stds": {
+      "auc_roc": 0.006,
+      "recall": 0.0129,
+      "pr_auc": 0.0071,
+      "precision": 0.0032,
+      "f1": 0.0052
+    }
+  },
+  "holdout_performance": {
+    "auc_roc": 0.6402,
+    "pr_auc": 0.5596,
+    "recall": 0.9492,
+    "precision": 0.4617,
+    "f1": 0.6212,
+    "brier": 0.235
+  },
+  "confusion_matrix": {
+    "tn": 1629,
+    "fp": 9651,
+    "fn": 443,
+    "tp": 8277
+  },
+  "hhi_baseline_auc": 0.73,
+  "vs_baseline": "SustAInable matches CDC HHI baseline",
+  "asymmetric_cost_design": {
+    "false_negative_cost": "Disabled/elderly residents miss cooling resources \u2014 NOT recoverable",
+    "false_positive_cost": "Resources deployed unnecessarily \u2014 recoverable",
+    "design_decision": "Threshold lowered to maximize recall subject to precision >= 0.40"
+  },
+  "risk_tiers": {
+    "high": ">=0.60",
+    "elevated": "0.30-0.59",
+    "baseline": "<0.30"
+  }
+}
