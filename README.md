@@ -149,7 +149,7 @@ All datasets are publicly accessible. No proprietary data required.
 
 > **Phase 2 — EDA in progress** Design memo complete. Exploratory daya analysis notebook now live. Seeking public health, climate equity, and development partners.
 
-SustAInable was developed as a capstone project through the [Equitech Futures Civic Tech Institute (CTI) 2026](https://www.equitechfutures.com/) cohort. The model architecture, feature schema, data strategy, and equity framework are fully designed. Implementation is the next step.
+SustAInable was developed as a supplemental capstone project through the [Equitech Futures Civic Tech Institute (CTI) 2026](https://www.equitechfutures.com/) cohort. The model architecture, feature schema, data strategy, and equity framework are fully designed. Implementation is the next step.
 
 **I am actively looking for:**
 
