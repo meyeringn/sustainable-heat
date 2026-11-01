@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "SustAInable: Neighborhood Heat Illness Risk Prediction"
+abstract: "An XGBoost classifier that assigns US ZIP codes a probability of elevated heat illness ahead of an extreme heat event, so cities can deploy cooling resources before hospitalizations rise."
+authors:
+  - family-names: Meyering
+    given-names: Nico
+type: software
+license: MIT
+repository-code: "https://github.com/meyeringn/sustainable-heat"
+date-released: 2026-05-31
+keywords:
+  - climate equity
+  - extreme heat
+  - public health
+  - disability justice
+  - machine learning
